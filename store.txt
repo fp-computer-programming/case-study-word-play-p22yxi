@@ -1,0 +1,12 @@
+with open("words.txt") as all_words, open('words_without_e.txt') as no_e_words:
+
+
+4
+def words_with_available_letter(file):
+    string = input('Enter a string of allowed letters: ')
+    with open(file) as infile:
+        words = []
+        for line in infile.readlines():
+            if uses_only(line, string) == True:
+                words.append(line)
+        print(words)
