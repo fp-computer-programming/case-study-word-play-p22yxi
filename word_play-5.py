@@ -9,4 +9,7 @@ def is_abecedarian(word):
 with open('words.txt') as infile:
     words = []
     for line in infile.readlines():
-        
+        line = line.strip()
+        if is_abecedarian(line) == True:
+            words.append(line)
+    print(words)
